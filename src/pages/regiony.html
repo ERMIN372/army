@@ -1,0 +1,52 @@
+<!-- {"title": "Выплаты по регионам — таблица | КОНТРАКТ·ГИД", "description": "Региональные единовременные выплаты при заключении контракта: таблица с поиском, сортировкой и пометками о статусе проверки.", "nav": "regiony"} -->
+    <section class="page-head">
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">Главная</a> / Регионы</p>
+        <h1>Выплаты по регионам</h1>
+        <p class="lead">Региональная часть добавляется к федеральной <span data-bind="federal.amount" data-fmt="rub">400 000 ₽</span>. В колонке «Итого» — сумма обеих единовременных выплат.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="note" style="margin-bottom:28px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+          <p>Суммы с пометкой «сверить» собраны из открытых неофициальных источников, где данные расходятся. Перед решением проверьте действующий региональный нормативный акт или позвоните в пункт отбора своего региона.</p>
+        </div>
+        <div class="toolbar">
+          <label class="visually-hidden" for="regions-q">Поиск региона</label>
+          <input type="search" id="regions-q" placeholder="Найти регион или округ…">
+          <span class="count" id="regions-count"></span>
+        </div>
+        <div class="table-wrap">
+          <table id="regions-table">
+            <thead>
+              <tr>
+                <th><button type="button" data-sort="name">Регион ↕</button></th>
+                <th><button type="button" data-sort="district">Округ ↕</button></th>
+                <th><button type="button" data-sort="amount">Региональная ↕</button></th>
+                <th>Итого с федеральной</th>
+                <th>Комментарий</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§</b> Как проверить</p>
+          <div><h2>Где взять точную цифру</h2></div>
+        </div>
+        <div class="grid grid-3">
+          <div class="cell"><span class="idx">01</span><h3>Региональный акт</h3><p>Постановление или указ главы региона о единовременной выплате — на официальном портале правовой информации.</p></div>
+          <div class="cell"><span class="idx">02</span><h3>Пункт отбора</h3><p>Сотрудники пункта отбора называют действующую сумму и условия получения.</p></div>
+          <div class="cell"><span class="idx">03</span><h3>Фонд «Защитники Отечества»</h3><p>Региональный филиал консультирует участников и семьи по мерам поддержки.</p></div>
+        </div>
+      </div>
+    </section>
+
+{{> apply}}

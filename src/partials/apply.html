@@ -1,0 +1,28 @@
+    <section class="section section--ink" id="zayavka">
+      <div class="wrap apply">
+        <div>
+          <p class="label"><b>§</b> Консультация</p>
+          <h2>Разберём вашу ситуацию — без обязательств</h2>
+          <p class="muted" style="color:inherit;opacity:.75">Оставьте телефон: расскажем, какие выплаты действуют в вашем регионе, какие документы собрать и куда обратиться. Консультация ни к чему не обязывает — контракт подписывается только лично в пункте отбора.</p>
+          <ul class="contact-list mt-32">
+            <li><span>Телефон</span><a data-bind="contacts.phone" data-bind-href="contacts.phoneHref" href="#">—</a></li>
+            <li><span>Telegram</span><a data-bind-href="contacts.telegram" href="#" target="_blank" rel="noopener">Написать в Telegram</a></li>
+            <li><span>Время работы</span><span data-bind="contacts.hours">—</span></li>
+          </ul>
+        </div>
+        <form class="form" data-lead action="#" method="post" novalidate>
+          <div class="form-row">
+            <label class="field"><span>Имя</span><input type="text" name="name" autocomplete="given-name" required></label>
+            <label class="field"><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+          </div>
+          <div class="form-row">
+            <label class="field"><span>Регион</span><input type="text" name="region" autocomplete="address-level1" placeholder="Например, Татарстан"></label>
+            <label class="field"><span>Возраст</span><input type="number" name="age" min="18" max="80" inputmode="numeric"></label>
+          </div>
+          <label class="field"><span>Вопрос</span><textarea name="question" placeholder="Что хотите уточнить?"></textarea></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Согласен на обработку персональных данных в соответствии с 152-ФЗ для обратной связи по заявке.</span></label>
+          <button class="btn btn--accent" type="submit">Отправить заявку <span class="arrow">→</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>

@@ -1,0 +1,134 @@
+<!-- {"title": "КОНТРАКТ·ГИД — служба по контракту: выплаты, требования, документы", "description": "Независимый справочник о военной службе по контракту: федеральные и региональные выплаты, калькулятор, специальности, требования, документы и льготы.", "nav": "home"} -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="label"><b>●</b> Справочник кандидата · 2026</p>
+            <h1>Контракт <span class="hl">без мифов</span>: деньги, условия, документы</h1>
+            <p class="lead">Собрали в одном месте всё, что обычно приходится выяснять по частям: из чего складываются выплаты, кого берут, какие бумаги нужны и что положено семье. Где цифры спорные — честно помечаем «сверить».</p>
+            <div class="hero-actions">
+              <a class="btn btn--accent" href="#calc-section">Посчитать выплаты <span class="arrow">→</span></a>
+              <a class="btn" href="trebovaniya.html">Проверить требования</a>
+            </div>
+          </div>
+          <aside class="dossier" aria-label="Кратко о главном">
+            <dl>
+              <dt>Федеральная</dt><dd data-bind="federal.amount" data-fmt="rub">400 000 ₽</dd>
+              <dt>Основание</dt><dd data-bind="federal.basis">—</dd>
+              <dt>Условие</dt><dd data-bind="federal.condition">—</dd>
+              <dt>Региональная</dt><dd>от 400 тыс. до 4+ млн ₽ <span class="verify">сверить</span></dd>
+              <dt>Где подписать</dt><dd>Пункт отбора / военкомат</dd>
+            </dl>
+          </aside>
+        </div>
+        <div class="ticker">
+          <div><div class="num" data-bind="federal.amount" data-fmt="short">400 тыс ₽</div><p>федеральная выплата при подписании</p></div>
+          <div><div class="num">от <span data-bind="monthly.from" data-fmt="short">210 тыс ₽</span></div><p>ориентир довольствия в месяц <span class="verify">сверить</span></p></div>
+          <div><div class="num">1 <small>год+</small></div><p>минимальный срок контракта для федеральной выплаты</p></div>
+          <div><div class="num">7 <small>шагов</small></div><p>от заявки до зачисления в часть</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 01</b> Навигация</p>
+          <div>
+            <h2>С чего начать</h2>
+            <p class="lead">Шесть разделов, которые закрывают 90% вопросов кандидата и его семьи.</p>
+          </div>
+        </div>
+        <div class="grid grid-3">
+          <a class="cell-link cell" href="vyplaty.html"><span class="idx">01 → Выплаты</span><h3>Из чего складываются деньги</h3><p>Федеральная, региональная, муниципальная части, ежемесячное довольствие и компенсации.</p></a>
+          <a class="cell-link cell" href="regiony.html"><span class="idx">02 → Регионы</span><h3>Сколько платит ваш регион</h3><p>Таблица с поиском и сортировкой. Каждая сумма — с пометкой о статусе проверки.</p></a>
+          <a class="cell-link cell" href="vakansii.html"><span class="idx">03 → Специальности</span><h3>Кем можно служить</h3><p>Боевые, технические и тыловые должности. Где учат с нуля, а где нужен гражданский опыт.</p></a>
+          <a class="cell-link cell" href="trebovaniya.html"><span class="idx">04 → Требования</span><h3>Подхожу ли я</h3><p>Возраст, здоровье, судимость — и интерактивный чек-лист документов.</p></a>
+          <a class="cell-link cell" href="lgoty.html"><span class="idx">05 → Льготы</span><h3>Что положено семье</h3><p>Статус ветерана, образование детей, кредитные каникулы, сохранение работы.</p></a>
+          <a class="cell-link cell" href="voprosy.html"><span class="idx">06 → Вопросы</span><h3>Частые вопросы</h3><p>Контракт или мобилизация, долги, иностранцы, расторжение — коротко и по делу.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calc-section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 02</b> Калькулятор</p>
+          <div>
+            <h2>Сколько получится за год</h2>
+            <p class="lead">Выберите регион и срок — увидите, из чего складывается сумма. Цифры подтягиваются из справочника и помечены, если требуют сверки.</p>
+          </div>
+        </div>
+{{> calc}}
+      </div>
+    </section>
+
+    <section class="section section--ink">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 03</b> Порядок</p>
+          <div>
+            <h2>Путь от заявки до части</h2>
+            <p class="lead">Сроки ориентировочные и зависят от региона и загрузки пункта отбора.</p>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><div><h3>Консультация</h3><p>Уточняете условия, выплаты своего региона и список документов — по телефону или лично.</p></div><span class="dur">1 день</span></li>
+          <li><div><h3>Сбор документов</h3><p>Паспорт, документы об образовании, справка об отсутствии судимости (её лучше заказать заранее).</p></div><span class="dur">до 30 дней</span></li>
+          <li><div><h3>Пункт отбора</h3><p>Собеседование, анкета, проверка документов.</p></div><span class="dur">1 день</span></li>
+          <li><div><h3>Медкомиссия (ВВК)</h3><p>Военно-врачебная комиссия определяет категорию годности.</p></div><span class="dur">1–3 дня</span></li>
+          <li><div><h3>Профотбор</h3><p>Психологическое тестирование и проверка физической подготовки.</p></div><span class="dur">1 день</span></li>
+          <li><div><h3>Подписание контракта</h3><p>Внимательно читаете текст: срок, должность, часть. Копию оставляете себе.</p></div><span class="dur">1 день</span></li>
+          <li><div><h3>Зачисление и выплаты</h3><p>Включение в списки части, приказ командира, перечисление единовременных выплат на карту.</p></div><span class="dur">по приказу</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 04</b> Специальности</p>
+          <div>
+            <h2>Востребованные должности</h2>
+            <p class="lead">Часть специальностей осваивается с нуля на подготовке, для других засчитывается гражданский опыт.</p>
+          </div>
+        </div>
+        <div class="grid grid-3" id="vacancies" data-limit="6"></div>
+        <p class="mt-32"><a class="btn" href="vakansii.html">Все специальности <span class="arrow">→</span></a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 05</b> Честно</p>
+          <div>
+            <h2>Что важно знать заранее</h2>
+            <p class="lead">Мы не продаём «лёгкие деньги». Перед решением взвесьте риски и проверьте условия.</p>
+          </div>
+        </div>
+        <div class="grid grid-2">
+          <div class="cell"><span class="idx">!</span><h3>Это служба с реальным риском</h3><p>Обсудите решение с семьёй, оформите доверенности и распоряжения по счетам до отъезда.</p></div>
+          <div class="cell"><span class="idx">!</span><h3>Контракт — только в пункте отбора</h3><p>Не платите посредникам и не передавайте документы третьим лицам. Отбор и подписание бесплатны.</p></div>
+          <div class="cell"><span class="idx">!</span><h3>Читайте, что подписываете</h3><p>Срок, должность, воинская часть, порядок выплат. Требуйте копию контракта.</p></div>
+          <div class="cell"><span class="idx">!</span><h3>Суммы меняются</h3><p>Регионы регулярно пересматривают выплаты. Ориентируйтесь на действующий региональный акт.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label"><b>§ 06</b> FAQ</p>
+          <div><h2>Коротко о главном</h2></div>
+        </div>
+        <div class="faq">
+          <details><summary>Можно ли получить выплату, если есть долги или кредиты?</summary><div class="answer"><p>Долги и кредиты сами по себе не лишают права на федеральную выплату. Учтите: при наличии исполнительного производства часть средств может быть взыскана — уточняйте у юриста и в пункте отбора.</p></div></details>
+          <details><summary>Где получать региональную выплату — по прописке или по месту подписания?</summary><div class="answer"><p>Как правило, по месту заключения контракта. Но некоторые регионы требуют регистрацию на своей территории. Проверяйте условия конкретного региона.</p></div></details>
+          <details><summary>Когда приходят деньги?</summary><div class="answer"><p>Федеральная выплата перечисляется после зачисления в списки части и приказа командира. Сроки региональной выплаты устанавливает регион.</p></div></details>
+        </div>
+        <p class="mt-32"><a class="btn" href="voprosy.html">Все вопросы <span class="arrow">→</span></a></p>
+      </div>
+    </section>
+
+{{> apply}}
