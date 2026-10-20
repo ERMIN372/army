@@ -1,0 +1,38 @@
+        <div class="calc" id="calc">
+          <div class="calc-form">
+            <label class="field">
+              <span>Регион заключения контракта</span>
+              <select id="calc-region"></select>
+            </label>
+            <label class="field" id="calc-custom-wrap" hidden>
+              <span>Региональная выплата, ₽</span>
+              <input type="number" id="calc-custom" min="0" step="50000" value="400000" inputmode="numeric">
+            </label>
+            <label class="field">
+              <span>Денежное довольствие в месяц, ₽</span>
+              <input type="number" id="calc-monthly" min="0" step="5000" inputmode="numeric">
+            </label>
+            <div class="field">
+              <span>Срок расчёта</span>
+              <input type="range" id="calc-months" min="1" max="36" value="12" aria-describedby="calc-months-out">
+              <div class="range-row"><span>1 мес.</span><b id="calc-months-out">12 мес.</b><span>36 мес.</span></div>
+            </div>
+            <p class="muted" style="font-size:14px;margin:0">Регион определяется местом заключения контракта, а не пропиской — но в ряде регионов действуют требования к регистрации. Уточняйте.</p>
+          </div>
+          <div class="calc-out" aria-live="polite">
+            <div>
+              <div class="total-cap">Ориентировочно за период</div>
+              <div class="total" id="out-total">—</div>
+            </div>
+            <div class="bar" aria-hidden="true"><i class="c1" id="bar-fed"></i><i class="c2" id="bar-reg"></i><i class="c3" id="bar-pay"></i></div>
+            <ul class="breakdown">
+              <li><i class="sw c1"></i><span>Федеральная единовременная</span><b id="out-fed">—</b></li>
+              <li><i class="sw c2"></i><span>Региональная единовременная</span><b id="out-reg">—</b></li>
+              <li><i class="sw c3"></i><span id="out-pay-cap">Денежное довольствие</span><b id="out-pay">—</b></li>
+            </ul>
+            <div class="note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+              <p>Расчёт ориентировочный. Не учитывает надбавки за должность, звание, выслугу, боевые и наградные выплаты, налоги и муниципальные доплаты. Точные суммы — в пункте отбора.</p>
+            </div>
+          </div>
+        </div>
