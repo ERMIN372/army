@@ -11,6 +11,12 @@ node build.mjs          # собирает src/ → dist/ (Node 18+, без за
 npx serve dist          # или любой статический сервер; можно открыть dist/index.html напрямую
 ```
 
+## Публикация на GitHub Pages
+
+1. Settings → Pages → Source: **GitHub Actions**.
+2. Влить изменения в `main` — workflow `.github/workflows/pages.yml` соберёт сайт и опубликует `dist/`.
+3. Адрес: `https://<user>.github.io/army/`. Перезапуск вручную: Actions → Deploy to GitHub Pages → Run workflow.
+
 ## Структура
 
 ```
